@@ -7,10 +7,10 @@ import rehypeRewrite from 'rehype-rewrite';
 import rehypeStringify from 'rehype-stringify'
 import { getLinksMapping, getPostBySlug, getSlugFromHref, updateMarkdownLinks } from './api'
 import removeMd from 'remove-markdown'
-import {Element} from 'hast-util-select'
 import { renderToStaticMarkup } from "react-dom/server"
 import NotePreview from '../components/misc/note-preview'
 import { fromHtml } from 'hast-util-from-html'
+import { Element } from 'hast-util-select/lib'
 
 
 export async function markdownToHtml(markdown: string, currSlug: string) {
@@ -44,6 +44,7 @@ export function getMDExcerpt(markdown: string, length: number = 500) {
   const text = removeMd(markdown, {
     stripListLeaders: false, 
     gfm: true,
+    useImgAltText: true,
   }) as string
   return text.slice(0, length).trim();
 }
