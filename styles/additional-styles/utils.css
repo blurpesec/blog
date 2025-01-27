@@ -7,17 +7,21 @@
 
 .internal-link-container > .internal-link:hover + .note-preview {
   @apply block;
+  position: absolute;
 }
 .internal-link-container {
   @apply relative;
 }
 .internal-link:hover {
   @apply underline;
+  cursor: pointer;
 }
 .internal-link {
   @apply rounded;
   color: #0969da;
   background-color: rgb(243 250 251) !important;
+  position: relative;
+  transition: all 0.2s ease;
 }
 
 /* Typography */

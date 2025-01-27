@@ -1,3 +1,4 @@
+import { usePrefetch } from '../../lib/hooks/prefetch';
 import markdownStyles from './markdown-styles.module.css'
 
 type Props = {
@@ -5,6 +6,8 @@ type Props = {
 }
 
 const PostBody = ({ content }: Props) => {
+  usePrefetch(); // Activate prefetching
+
   return (
     <div
       className={markdownStyles['markdown-body']}
