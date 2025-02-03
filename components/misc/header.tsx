@@ -27,7 +27,7 @@ const Header = () => {
               className="block hover:underline"
               aria-label="Thoughts of an Ethereum Developer"
             >
-              Thoughts of an Ethereum Developer
+              Thoughts of a Naive Optimist
             </Link>
           </h2>
           <ul className="flex grow justify-end flex-wrap items-center">
